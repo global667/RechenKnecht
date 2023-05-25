@@ -16,6 +16,10 @@ Q_INVOKABLE void Rechner::getNumber(const QString &symbol)
     {
         setSolution(calc(m_solution));
         return;
+    } else if (symbol.compare("clr") == 0)
+    {
+        setSolution("");
+        return;
     }
     setSolution(m_solution += symbol);
 }

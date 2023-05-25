@@ -7,7 +7,7 @@
 //#include <iostream>
 /*
  * Diese Klasse berechnet nach dem Prinzip des Rekursiven Abstiegs
- * aus einem Term ein Ergebnis.
+ * aus einem Term ein Ergebnis, wie es im Buch von Breymann beschrieben ist
  * TODO
  * Dies soll mit allen Zahlensystemen funktionieren. Dabei wird in-
  * tern im Dezimalsystem gerechnet. Vor und nach der Berechnung und
