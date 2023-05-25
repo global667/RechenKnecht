@@ -1,5 +1,6 @@
 #include "rechner.h"
 #include <QDebug>
+#include <QtMath>
 
 Rechner::Rechner(QObject *parent) : QObject(parent)
 {
@@ -99,7 +100,13 @@ long Rechner::summand(QChar& c)
         }
         else {
             c = term.at(position++); // / überspringen
-            s /= faktor(c);
+            try {
+                s =  div (faktor(c), s).quot; // TODO: write an "divide by zero" excpetion
+            } catch (std::exception e) {
+                qDebug() << e.what();
+                return s;
+            }
+
         }
     }
     return s;
